@@ -10,7 +10,7 @@ jobs:
           on:
             branch: main
           run_phase: before_script
-          input_dir: '/python'
+          input_dir: '/a'
           output_dir: '/python'
           output_format: cyclonedx-xml
         deploy:
@@ -36,8 +36,8 @@ jobs:
           on:
             branch: main
           run_phase: before_script
-          input_dir: '/python'
-          output_dir: '/python/result_sbom'
+          input_dir: '/a'
+          output_dir: '/a/result_sbom'
           output_format: cyclonedx-json
         deploy:
           - provider: releases
