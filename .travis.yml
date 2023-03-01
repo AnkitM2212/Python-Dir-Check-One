@@ -51,4 +51,6 @@ jobs:
         - cd python
         - python hello_world.py
         - pip install -r requirements.txt
+        - cd ..
+        - cd a
         - ls -R
