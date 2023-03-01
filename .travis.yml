@@ -17,7 +17,7 @@ jobs:
           - provider: releases
             edge: true
             file: 
-              - 'python/python/*.xml'
+              - 'python/**/*.xml'
             token: $GHTOKEN
             on:
               branch: main
