@@ -10,7 +10,7 @@ jobs:
           on:
             branch: main
           run_phase: before_script
-          input_dir: '/a'
+          input_dir: '/python'
           output_dir: '/python'
           output_format: cyclonedx-xml
         deploy:
@@ -36,8 +36,8 @@ jobs:
           on:
             branch: main
           run_phase: before_script
-          input_dir: '/a'
-          output_dir: '/a/result_sbom'
+          input_dir: '/python'
+          output_dir: '/python/result_sbom'
           output_format: cyclonedx-json
         deploy:
           - provider: releases
@@ -51,6 +51,4 @@ jobs:
         - cd python
         - python hello_world.py
         - pip install -r requirements.txt
-        - cd ..
-        - cd a
         - ls -R
