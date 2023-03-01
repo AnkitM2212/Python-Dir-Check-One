@@ -18,8 +18,8 @@ jobs:
             edge: true
             file_glob: true
             file: 
-              - 'python/*.json'
-              - 'python/*.txt'
+              - 'python/**/*.xml'
+              - 'python/**/*.txt'
             token: $GHTOKEN
             on:
               branch: main
@@ -45,7 +45,7 @@ jobs:
             edge: true
             file_glob: true
             file: 
-              - 'result_sbom/python/*.json'
+              - 'result_sbom/python/*.xml'
             token: $GHTOKEN
             on:
               branch: main
