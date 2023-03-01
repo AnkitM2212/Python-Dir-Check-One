@@ -42,7 +42,7 @@ jobs:
           - provider: releases
             edge: true
             file: 
-              - 'python/result_sbom/**/*.xml'
+              - 'result_sbom/python/*.xml'
             token: $GHTOKEN
             on:
               branch: main
