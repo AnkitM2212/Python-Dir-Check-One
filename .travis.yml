@@ -16,10 +16,8 @@ jobs:
         deploy:
           - provider: releases
             edge: true
-            file_glob: true
             file: 
-              - 'python/**/*.xml'
-              - 'python/**/*.txt'
+              - 'python/python/*.xml'
             token: $GHTOKEN
             on:
               branch: main
@@ -43,9 +41,8 @@ jobs:
         deploy:
           - provider: releases
             edge: true
-            file_glob: true
             file: 
-              - 'result_sbom/python/*.xml'
+              - 'python/result_sbom/python/*.xml'
             token: $GHTOKEN
             on:
               branch: main
