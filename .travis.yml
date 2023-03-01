@@ -17,7 +17,7 @@ jobs:
           - provider: releases
             edge: true
             file: 
-              - 'python/**/*.xml'
+              - 'python/python/*.xml'
             token: $GHTOKEN
             on:
               branch: main
@@ -37,12 +37,12 @@ jobs:
           run_phase: before_script
           input_dir: '/python'
           output_dir: '/python/result_sbom'
-          output_format: cyclonedx-xml
+          output_format: cyclonedx-json
         deploy:
           - provider: releases
             edge: true
             file: 
-              - 'result_sbom/python/*.xml'
+              - 'result_sbom/python/*.json'
             token: $GHTOKEN
             on:
               branch: main
